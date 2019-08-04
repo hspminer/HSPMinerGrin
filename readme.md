@@ -2,76 +2,79 @@
 
 # HSPMiner
 
-用于显卡GPU的`Grin`挖矿软件。
+Nvidia GPU Miner for `Grin`mining.
 
-## 下载地址
+## Download
 
-[从这里下载](https://github.com/hspminer/HSPMinerGrin/releases)
+[Download here](https://github.com/hspminer/HSPMinerGrin/releases)
 
-## 社区支持
+## Community support
 
-官方QQ群： 870349675
+QQ： 870349675
 
-## 参考算力（默认频率）
+## Performance (stock frequency)
 
-| 算法             |  币种   | P106-100  |  P104-8G   |  1070ti  |  1080ti  |   2080   |
+| Algorithm        |  Coin   | P106-100  |  P104-8G   |  1070ti  |  1080ti  |   2080   |
 | :--------------- | :-----: | :-------: | :--------: | :------: | :------: | :------: |
-| ...           |   ...   |   ...   |   ...    |  ...   |   ...   |   ...    |
+| cuckaroo         | GRIN29  |   3.45    |    5.6     |   5.25   |   8.1    |   8.9    |
+| cuckarood        | GRIN29  |   3.45    |    5.6     |   5.25   |   8.1    |   9.1    |
 
 
-## 功能特点
+## Features
 
-- 支持Windows和Linux
-- 支持备用矿池的设置
-- 支持SSL方式连接矿池
-- 开发手续费:
-  - 
-
-
-## 配置需求
-
-- **NVIDIA显卡驱动版本，大于等于377**
-- 显卡参数需求:
-
-|       算法       |  币种   | Compute Capability | 显存 (Win7 & Linux) | 显存 (Win10) |
-| :--------------: | :-----: | :----------------: | :-----------------: | :----------: |
+* Support Windows & Linux.
+* Support backup mining pool configuration.
+* Support SSL connection to mining pools.
+* Dev Fee: 
+  *
 
 
+## Requirements
 
-## 使用样例
+- **NVIDIA graphics driver version, greater than or equal to 377**
+- GPU Specific Requirements:
+
+|    Algorithm     |  Coin   | Compute Capability | Memory (Win7 & Linux) | Memory (Win10) |
+| :--------------: | :-----: | :----------------: | :-------------------: | :------------: |
+|   cuckaroo(d)    | GRIN29  | 6.0, 6.1, 7.0, 7.5 |          5GB          |      6GB       |
+|     cuckatoo     | GRIN31  | 6.0, 6.1, 7.0, 7.5 |          8GB          |      10GB      |
+
+
+
+## Sample Usages
 
 #### Grin29
 
-- **f2pool:** HSPMinerGrin.exe -pool grin29.f2pool.com:13654 -wal {替换钱包地址} -worker {替换旷工名称} -psw {替换密码} -logfile -api 0.0.0.0:16666
-- **sparkpool:** HSPMinerGrin.exe -pool grin.sparkpool.com:6666 -wal {替换钱包地址} -worker {替换旷工名称} -logfile -api 0.0.0.0:16666
+- **f2pool:** HSPMinerGrin.exe -pool grin29.f2pool.com:13654 -wal {Replace wallet address} -worker {Replace worker name} -psw {Replace worker password} -logfile -api 0.0.0.0:16666
+- **sparkpool:** HSPMinerGrin.exe -pool grin.sparkpool.com:6666 -wal {Replace wallet address} -worker {Replace worker name} -logfile -api 0.0.0.0:16666
 
-## 命令行参数
+## CMD options：
+-	-wal		The Grin Wallet Address
+-	-worker	    The worker name of Bytom
+-	-pool		The Grin pool address
+-	-psw		The Grin mine password
 
-## API查询接口
+##Run information:
+-	-api		Enable the network monitoring address, such as: 192.168.1.2:16666, use the browser to access http://192.168.1.2:16666, monitor the mining machine operation
+-	-logfile	Enable the log file, the default is to generate the file name according to the time, followed by the file name to specify the file, such as -logfile hspminer.log
+-	-hide		Hide the interface immediately after starting the program, note that it will run in the background. If you open the api interface, you can click WebMonitor.cmd to start the browser monitoring (not available under Linux)
 
-### 网页监控
+### Web Monitor
 
-在浏览器中打开 http://api_host:port/ 启动网页监控.
-
-
-## FAQ
-
-
-#### 为什么我的矿池算力比本地算力低?
-
-- `矿池的显示算力`
+Open http://api_host:port/ in your browser to use web monitor.
 
 
-## 修改记录
+
+## Change Log
 
 #### HSPMinerGrin 2.0.1 2019/1/16
 
-- Add:添加对鱼池的支持
-- Add:提升性能4%-5%
-- Fix:修正一些bug
+- Add:Add support for f2pool
+- Add:Improve performance by 4%-5%
+- Fix:Fix some bugs
 
 
 #### HSPMinerGrin 2.0.0 2019/1/15
 
-- Add:实验性支持Grin C29算法
+- Add:Experimental support for the Grin C29 algorithm
 
