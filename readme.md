@@ -16,8 +16,8 @@ QQ： 870349675
 
 | Algorithm        |  Coin   | P106-100  |  P104-8G   |  1070ti  |  1080ti  |   2080   |
 | :--------------- | :-----: | :-------: | :--------: | :------: | :------: | :------: |
-| cuckaroo         | GRIN29  |   3.45    |    5.6     |   5.25   |   8.1    |   8.9    |
-| cuckarood        | GRIN29  |   3.45    |    5.6     |   5.25   |   8.1    |   9.1    |
+| cuckaroo         | GRIN29  |   3.45    |    5.6     |   5.25   |   8.1    |   ...    |
+| cuckarood        | GRIN29  |   3.45    |    5.6     |   5.25   |   8.1    |   ...    |
 
 
 ## Features
@@ -31,13 +31,13 @@ QQ： 870349675
 
 ## Requirements
 
-- **NVIDIA graphics driver version, greater than or equal to 377**
+- **NVIDIA graphics driver version, greater than or equal to 39x、41x、42x**
 - GPU Specific Requirements:
 
 |    Algorithm     |  Coin   | Compute Capability | Memory (Win7 & Linux) | Memory (Win10) |
 | :--------------: | :-----: | :----------------: | :-------------------: | :------------: |
 |   cuckaroo(d)    | GRIN29  | 6.0, 6.1, 7.0, 7.5 |          5GB          |      6GB       |
-|     cuckatoo     | GRIN31  | 6.0, 6.1, 7.0, 7.5 |          8GB          |      10GB      |
+|     cuckatoo     | GRIN31  |   ...   |   ...   |   ...   |
 
 
 
@@ -66,6 +66,13 @@ Open http://api_host:port/ in your browser to use web monitor.
 
 
 ## Change Log
+
+#### HSPMinerGrin 2.3.1 2019/8/17
+
+- Add: Support C29D algorithm
+- Add: Added support for 39x, 41x, 42x drivers
+- Tip: It is possible that the old driver may not be supported. Please use the 431.60 driver.
+
 
 #### HSPMinerGrin 2.0.1 2019/1/16
 
